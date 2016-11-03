@@ -35,8 +35,7 @@ function get_latlong(area)
     return lat,lng,acc,types
   end
 end
-function get_staticmap(area)
-  local api        = base_api .. "/staticmap?"
+function get_staticmap(area)  local api        = base_api .. "/staticmap?"
   local lat,lng,acc,types = get_latlong(area)
 
   local scale = types[1]
@@ -78,7 +77,7 @@ function run(msg, matches)
 	  text = text..'\nغروب آفتاب: '..data.Sunset
 	  text = text..'\nاذان مغرب: '..data.Maghrib
 	  text = text..'\nعشاء : '..data.Isha
-	  text = text..'\n\n@permagChannel'
+	  text = text..'\n\n@TeleGuardTM'
 	if string.match(text, '0') then text = string.gsub(text, '0', '۰') end
 	if string.match(text, '1') then text = string.gsub(text, '1', '۱') end
 	if string.match(text, '2') then text = string.gsub(text, '2', '۲') end
